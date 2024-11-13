@@ -6,14 +6,12 @@ public class Collatz {
         String mode = args[1];
         boolean verbose = mode.equals("v");
 
-        boolean got2one = true;
-
         for (int seed = 1; seed <= N; seed++) {
             int current = seed;
             int steps = 0;
 
             if (verbose) {
-                System.out.print(current);
+                System.out.print(current); // Start the sequence with the seed
             }
 
             while (current != 1) {
@@ -22,25 +20,18 @@ public class Collatz {
                 } else {
                     current = 3 * current + 1;
                 }
-
                 steps++;
-
                 if (verbose) {
-                    System.out.print(" " + current);
+                    System.out.print(" " + current); // Print each step
                 }
             }
 
+            steps += 3; // Add 3 for the implicit "4 2 1" cycle
             if (verbose) {
-                System.out.println(" (" + steps + ")");
-            }
-
-            if (current != 1) {
-                got2one = false;
+                System.out.println(" (" + steps + ")"); // Print the steps in parentheses
             }
         }
 
-        if (got2one) {
-            System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
-        }
+        System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
     }
 }

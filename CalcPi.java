@@ -1,5 +1,4 @@
 // Computes an approximation of PI.
-
 public class CalcPi {
 
     public static void main(String[] args) {
@@ -21,7 +20,7 @@ public class CalcPi {
         int padding = realPiLabel.length() - approxPiLabel.length();
         String spaces = " ".repeat(Math.max(0, padding));
 
-        System.out.printf("%s %.15f%n", realPiLabel, Math.PI);
-        System.out.printf("%s%s %.15f%n", approxPiLabel, spaces, piApproximation);
+        System.out.printf("%s %.16f%n", realPiLabel, Math.PI);
+        System.out.printf("%s%s %.16f%n", approxPiLabel, spaces, piApproximation);
     }
 }
