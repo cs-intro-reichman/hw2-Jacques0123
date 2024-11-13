@@ -20,7 +20,8 @@ public class CalcPi {
         int padding = realPiLabel.length() - approxPiLabel.length();
         String spaces = " ".repeat(Math.max(0, padding));
 
-        System.out.printf("%s %.16f%n", realPiLabel, Math.PI);
-        System.out.printf("%s%s %.16f%n", approxPiLabel, spaces, piApproximation);
+        // Adjust formatting for expected output
+        System.out.printf("%s %.15g%n", realPiLabel, Math.PI);
+        System.out.printf("%s%s %.15g%n", approxPiLabel, spaces, piApproximation);
     }
 }
