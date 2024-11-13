@@ -11,7 +11,7 @@ public class Collatz {
             int steps = 0;
 
             if (verbose) {
-                System.out.print(current); // Start the sequence with the seed
+                System.out.print(current);
             }
 
             while (current != 1) {
@@ -22,13 +22,12 @@ public class Collatz {
                 }
                 steps++;
                 if (verbose) {
-                    System.out.print(" " + current); // Print each step
+                    System.out.print(" " + current);
                 }
             }
 
-            steps += 3; // Add 3 for the implicit "4 2 1" cycle
             if (verbose) {
-                System.out.println(" (" + steps + ")"); // Print the steps in parentheses
+                System.out.println(" (" + (steps + 3) + ")");
             }
         }
 

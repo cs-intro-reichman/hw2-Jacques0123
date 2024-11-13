@@ -13,7 +13,7 @@ public class CalcPi {
             }
         }
 
-        piApproximation *= 4.0;
+        piApproximation *= 4;
 
         String realPiLabel = "pi according to Java:";
         String approxPiLabel = "pi, approximated:";
